@@ -49,5 +49,19 @@
 
 ###relative webs###
 >>http://pixhawk.org/choice
+
 >>http://ardupilot.com/
+
+###how to change the board to another one###
+>>first: add your board to AP_HAL_Boards
+
+>>second: add your vars to the namespace, AP_HAL_Flying_Namespace.h 
+
+>>third: finish including HAL_Flying_Class.h and HAL_Flying_Class.cpp
+
+>>forth: then you can add the Devices to the fold under AP_HAL_Flying, such as GPIO.h GPIO.cpp and so on.
+
+>>fifth: include you Devices drivers including *.h and *.cpp files to AP_HAL_Flying_Private.h
+
+>>sixth: the other file can be finished  AP_HAL_Flying_Main.h
 

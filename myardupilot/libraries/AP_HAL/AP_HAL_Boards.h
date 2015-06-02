@@ -19,6 +19,7 @@
 #define HAL_BOARD_LINUX    7
 #define HAL_BOARD_VRBRAIN  8
 #define HAL_BOARD_YUNEEC   9
+#define HAL_BOARD_Flying   10
 #define HAL_BOARD_EMPTY    99
 
 // default board subtype is -1
@@ -259,6 +260,9 @@
  # define CLI_ENABLED           DISABLED
  # define FRSKY_TELEM_ENABLED   DISABLED
  # define COPTER_LEDS			DISABLED
+
+#elif CONFIG_HAL_BOARD == HAL_BOARD_Flying
+#define CONFIG_HAL_BOARD_SUBTYPE HAL_BOARD_SUBTYPE_NONE
 #else
 #error "Unknown CONFIG_HAL_BOARD type"
 #endif
