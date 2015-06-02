@@ -43,3 +43,11 @@
 >>[Overview of license](http://dev.ardupilot.com/wiki/license-gplv3)
 
 >>[Full Text](https://github.com/diydrones/ardupilot/blob/master/COPYING.txt)
+
+###STM32F37x makefile libraries###
+>>https://github.com/Maelok/stm32_libraries
+
+###relative webs###
+>>http://pixhawk.org/choice
+>>http://ardupilot.com/
+
