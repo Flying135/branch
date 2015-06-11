@@ -10,7 +10,7 @@
 #include <AP_Math.h>
 #include <AP_Param.h>
 #include <AP_Progmem.h>
-
+#include <StorageManager.h>
 #include <AP_HAL.h>
 #include <AP_HAL_YUNEEC.h>
 #include <utility/pinmap_typedef.h>
