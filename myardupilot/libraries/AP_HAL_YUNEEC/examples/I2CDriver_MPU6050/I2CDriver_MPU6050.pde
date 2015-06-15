@@ -3,7 +3,7 @@
 //
 // Simple test for the AP_InertialSensor driver.
 //
-
+#include <AP_Terrain.h>
 #include <stdarg.h>
 #include <AP_Common.h>
 #include <AP_Progmem.h>
@@ -29,9 +29,9 @@
 #include <AP_ADC_AnalogSource.h>
 #include <AP_Compass.h>
 #include <AP_Declination.h>
-
+#include "AP_InertialSensor_MPU6050.h"
 const AP_HAL::HAL& hal = AP_HAL_BOARD_DRIVER;
-AP_InertialSensor_MPU6050 ins;
+AP_InertialSensor  ins;
 
 void setup(void)
 {
@@ -176,7 +176,7 @@ void run_test()
     while( !hal.console->available() ) {
 
         // wait until we have a sample
-        ins.wait_for_sample(1000);
+        ins.wait_for_sample();
 
         // read samples from ins
         ins.update();
